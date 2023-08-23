@@ -1,2 +1,1 @@
 require("dhaval")
-print('hello')
