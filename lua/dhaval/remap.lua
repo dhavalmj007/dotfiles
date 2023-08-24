@@ -48,3 +48,13 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 vim.keymap.set("n", "<C-a>", "ggVG")
+
+
+-- Debbuggin 
+vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
+vim.keymap.set("n", "<F6>", ":lua require'dap'.step_over()<CR>")
+vim.keymap.set("n", "<F7>", ":lua require'dap'.step_into()<CR>")
+vim.keymap.set("n", "<F8>", ":lua require'dap'.step_out()<CR>")
+vim.keymap.set("n", "\\b", ":lua require'dap'.toggle_breakpoint()<CR>")
+vim.keymap.set("n", "\\B", ":lua require'dap'.set_breakpoint(vim.fn.input('Break condition: '))<CR>")
+vim.keymap.set("n", "\\r", ":lua require'dap'.repl.open()<CR>")
