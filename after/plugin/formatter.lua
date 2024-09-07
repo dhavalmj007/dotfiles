@@ -87,6 +87,14 @@ require("formatter").setup({
 				}
 			end,
 		},
+		rust = {
+			function()
+				return {
+					exe = "rustfmt --edition 2021",
+					stdin = true,
+				}
+			end,
+		},
 
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
