@@ -81,7 +81,7 @@ require("formatter").setup({
 		html = {
 			function()
 				return {
-					exe = "prettier",
+					exe = "prettierd",
 					args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote" },
 					stdin = true,
 				}
@@ -91,6 +91,15 @@ require("formatter").setup({
 			function()
 				return {
 					exe = "rustfmt --edition 2021",
+					stdin = true,
+				}
+			end,
+		},
+		toml = {
+			function()
+				return {
+					exe = "prettier",
+					args = { "--stdin-filepath", vim.api.nvim_buf_get_name(0), "--single-quote" },
 					stdin = true,
 				}
 			end,
